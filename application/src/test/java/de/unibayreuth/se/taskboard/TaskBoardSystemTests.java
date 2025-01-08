@@ -45,7 +45,7 @@ public class TaskBoardSystemTests extends AbstractSystemTest {
     @Test
     void createAndDeleteTask() {
         Task createdTask = taskService.create(
-                TestFixtures.TASKS.getFirst()
+                TestFixtures.getTasks().getFirst()
         );
 
         when()

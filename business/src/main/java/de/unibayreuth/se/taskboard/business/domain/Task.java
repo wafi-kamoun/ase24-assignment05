@@ -4,6 +4,7 @@ import lombok.*;
 import org.springframework.lang.NonNull;
 import org.springframework.lang.Nullable;
 
+import java.io.Serializable;
 import java.time.LocalDateTime;
 import java.time.ZoneId;
 import java.util.UUID;
@@ -12,7 +13,7 @@ import java.util.UUID;
  * Domain class that stores the task metadata.
  */
 @Data
-public class Task {
+public class Task implements Serializable {
         @Nullable
         private UUID id; // null when task is not persisted yet
         @NonNull
