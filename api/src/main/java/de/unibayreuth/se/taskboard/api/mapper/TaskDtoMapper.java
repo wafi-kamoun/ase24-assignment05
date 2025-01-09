@@ -6,6 +6,7 @@ import de.unibayreuth.se.taskboard.business.domain.Task;
 import lombok.NoArgsConstructor;
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean;
 
 import java.time.LocalDateTime;
@@ -20,8 +21,8 @@ public abstract class TaskDtoMapper {
 
 //    @Autowired
 //    private UserService userService;
-//    @Autowired
-//    private UserDtoMapper userDtoMapper;
+    @Autowired
+    private UserDtoMapper userDtoMapper;
 
     protected boolean utcNowUpdated = false;
     protected LocalDateTime utcNow;
