@@ -1,6 +1,19 @@
 package de.unibayreuth.se.taskboard.business.ports;
 
+import java.util.Collection;
+import java.util.UUID;
+
+import de.unibayreuth.se.taskboard.business.domain.User;
+
 public interface UserService {
-    //TODO: Add user service interface that the controller uses to interact with the business layer.
-    //TODO: Implement the user service interface in the business layer, using the existing user persistence service.
+
+    User update(User user);
+
+    void delete(UUID id);
+
+    User create(User user);
+
+    User getById(UUID id);
+
+    Collection<User> getAll();
 }

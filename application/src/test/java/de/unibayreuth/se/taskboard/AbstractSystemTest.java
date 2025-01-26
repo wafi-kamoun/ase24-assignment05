@@ -15,6 +15,7 @@ import org.testcontainers.utility.DockerImageName;
 
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
 public abstract class AbstractSystemTest {
+    @SuppressWarnings("resource")
     static final PostgreSQLContainer<?> postgres = new PostgreSQLContainer<>(
             DockerImageName.parse("postgres:16-alpine"))
             .withUsername("postgres")
